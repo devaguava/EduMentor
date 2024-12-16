@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import '../styles/Produk.css'; 
-import tutorAnisa from '../assets/tutorAnisa.png';
+import tutorAnisa from '../assets/TutorAnisa.png';
 import tutorJennie from '../assets/tutorJennie.png';
 import tutorAdi from '../assets/tutorAdi.png';
 import tutorCarissa from '../assets/tutorCarissa.png';
