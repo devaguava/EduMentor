@@ -1,7 +1,7 @@
 import tutorJennie from '../assets/Tutor Jennie.png';
 import tutorAdi from '../assets/Tutor Adi.png';
 import tutorCarissa from '../assets/Tutor Carissa.png';
-import tutorAnisa from '../assets/Tutor Anisa.png';
+import tutorAnisa1 from '../assets/Tutor Anisa.png';
 
 export const tutorsSection = {
     content:`<p className="deskripsi"></p>
@@ -25,7 +25,7 @@ export const tutorsList = [
         name:'Carissa'
     },
     {
-        image:tutorAnisa,
+        image:tutorAnisa1,
         name:'Anisa Rahma Sari'
     }
 ]
