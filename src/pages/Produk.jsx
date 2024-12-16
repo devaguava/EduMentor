@@ -1,6 +1,7 @@
 // src/pages/Produk.jsx
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import '../styles/Produk.css'; 
 import tutorAnisa from '../assets/TutorAnisa.png';
 import tutorJennie from '../assets/tutorJennie.png';
@@ -293,6 +294,7 @@ const Produk = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
