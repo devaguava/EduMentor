@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 import { homeSection } from "../data/HomeSection";
 import { courseSection } from "../data/CourseSection";

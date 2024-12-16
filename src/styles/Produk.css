@@ -1,0 +1,164 @@
+/* src/styles/Produk.css */
+.produk-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+  }
+
+  .sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+  
+  .sidebar input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .produk-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 kolom */
+    gap: 25px; /* Jarak antar produk */
+    width: 100%;
+  }
+  
+  .produk-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .produk-item:hover {
+    transform: scale(1.05); /* Efek hover untuk memperbesar */
+  }
+  
+  .produk-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .produk-item .info {
+    padding: 15px;
+  }
+  
+  .produk-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .produk-item p {
+    margin: -5px 0;
+    font-size: 14px;
+  }
+  
+  .produk-item .mentor {
+    color: black;
+    font-size: 12px;
+  }
+  
+  .produk-item .rating {
+    display: flex;
+    align-items:end;
+    justify-content: start;
+    margin-top: 10px;
+  }
+  
+  .produk-item .rating span {
+    font-size: 12px;
+    color: #daba0a; /* Warna bintang rating */
+  }
+  
+  input[type="radio"] {
+    -webkit-appearance: none; /* Menghilangkan tampilan default radio button di Webkit-based browsers (Chrome, Safari) */
+    appearance: none; /* Menghilangkan tampilan default radio button di browser lain */
+    width: 20px; /* Ukuran radio button */
+    height: 20px; /* Ukuran radio button */
+    border-radius: 50%; /* Membuat radio button berbentuk lingkaran */
+    background-color: #fff; /* Warna latar belakang radio button */
+    border: 2px solid #6192A3; /* Warna border radio button */
+    cursor: pointer; /* Menambahkan cursor pointer saat hover pada radio button */
+    position: relative; /* Memungkinkan posisi elemen anak berada di dalam */
+    outline: none; /* Menghilangkan outline */
+  }
+  
+  /* Menambahkan gaya untuk radio button itu sendiri */
+  input[type="radio"]:checked {
+    background-color: #6192A3; /* Warna latar belakang saat radio button dipilih */
+    border-color: #6192A3;     /* Warna border saat dipilih */
+  }
+  
+/* Mengubah warna slider */
+input[type="range"] {
+    -webkit-appearance: none; /* Menghilangkan tampilan default slider di Webkit-based browsers (Chrome, Safari) */
+    appearance: none; /* Menghilangkan tampilan default slider di browser lain */
+    width: 100%; /* Mengatur lebar slider */
+    height: 8px; /* Mengatur tinggi track slider */
+    background: #ddd; /* Warna latar belakang track slider */
+    border-radius: 5px; /* Membuat track slider lebih bulat */
+    outline: none; /* Menghilangkan outline saat slider dipilih */
+  }
+  
+  /* Mengubah warna thumb slider */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Menghilangkan tampilan default thumb di Webkit-based browsers */
+    appearance: none;
+    width: 20px; /* Lebar thumb */
+    height: 20px; /* Tinggi thumb */
+    border-radius: 100%; /* Membuat thumb berbentuk lingkaran */
+    background: #6192A3; /* Warna thumb */
+    cursor: pointer; /* Menambahkan cursor pointer saat hover pada thumb */
+  }
+
+  @media (max-width: 1500px) {
+    .produk-list {
+        grid-template-columns: repeat(3, 1fr); /* 2 kolom per baris */
+      }
+  }
+
+  @media (max-width: 1000px) {
+    .produk-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom per baris */
+      }
+  }
+  
+
+  @media (max-width: 480px) {
+    .produk-list {
+      grid-template-columns: 1fr; /* 1 kolom per baris */
+    }
+  }
+
+#category{
+    font-size: 12px;
+    color: #6192A3;
+    padding-bottom: 20px;
+}
+
+#harga{
+    font-size: large;
+    font-weight: bold;
+    color: #a0a0a0;
+}
+
+.produk-item .rating span {
+    margin-right: 5px; /* Menambahkan spasi antara span pertama dan kedua */
+  }
