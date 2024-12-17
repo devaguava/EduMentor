@@ -1,7 +1,6 @@
 .produk-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    flex-grow: 1;
+    padding-bottom: 60px;
   }
   
   .sidebar {
@@ -163,48 +162,10 @@ input[type="range"] {
     margin-right: 5px; /* Menambahkan spasi antara span pertama dan kedua */
   }
 
-
-  
-  /* Styling untuk modal pembayaran */
-.payment-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.qr-placeholder {
-  width: 150px;
-  height: 150px;
-  background-color: #ddd;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer{
+    position: fixed;
 }

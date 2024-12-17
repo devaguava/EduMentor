@@ -69,3 +69,11 @@
       float: none;
     }
   }
+
+  .nav-icons {
+    font-size: 1.5rem; /* Ukuran ikon */
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    color: #333; /* Warna ikon */
+    vertical-align: middle; /* Menyelaraskan ikon dengan teks */
+  }
+  

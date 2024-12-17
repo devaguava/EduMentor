@@ -8,7 +8,8 @@ export const tutorsSection = {
               <h2>Top Mentor</h2>
               <p>
                 
-              </p>`
+              </p>`,
+              content2: `<a href="/mentor" class="tbl-pink">Lihat Semua Mentor</a>`,
 }
 
 export const tutorsList = [
