@@ -73,7 +73,7 @@ const Profile = () => {
       <div className="profile-content">
         {/* Courses Section */}
         <div className="courses-section">
-          <h2>modul yang Diambil</h2>
+          <h2>Modul yang Diambil</h2>
           <ul>
             {user.coursesTaken.map((course) => (
               <li key={course.id} className="course-item">

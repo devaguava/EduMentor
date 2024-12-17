@@ -36,6 +36,9 @@
   }
   
   .produk-item {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -198,7 +201,7 @@ input[type="range"] {
 
 button {
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #6192A3;
   color: white;
   border: none;
   border-radius: 5px;
@@ -206,5 +209,28 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #6192A3;
+}
+
+
+.produk-item button {
+  text-align: right;
+  margin-top: 25px;
+  padding: 5px 10px;
+  background-color: #6192A3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-end;
+  transition: background-color 0.3s;
+}
+
+.btn-cancel{
+  background-color: rgb(224, 64, 64);
+}
+
+.btn-cancel:hover{
+  background-color: rgb(224, 64, 64);
 }

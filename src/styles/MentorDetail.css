@@ -1,43 +1,145 @@
+/* Container utama untuk tampilan mentor */
 .mentor-detail-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .mentor-detail-header {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 40px;
+}
+
+/* Sidebar */
+.mentor-sidebar {
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.mentor-info {
+  font-family: 'Arial', sans-serif;
+}
+
+.mentor-info h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mentor-info p {
+  font-size: 1em;
+  color: #555;
+  margin: 5px 0;
+}
+
+.mentor-info strong {
+  font-weight: bold;
+}
+
+/* Main content area */
+.mentor-main {
+  flex: 2;
+  min-width: 600px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Judul Produk */
+h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Grid produk */
+.mentor-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Card Produk */
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h4 {
+  font-size: 1.2em;
+  color: #6192A3;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+}
+
+.product-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #6192A3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #6192A3;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .mentor-detail-container {
+    flex-direction: column;
     align-items: center;
   }
-  
-  .mentor-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+
+  .mentor-sidebar {
+    max-width: 100%;
+    margin-bottom: 30px;
   }
-  
-  .mentor-info {
-    margin-left: 20px;
+
+  .mentor-main {
+    min-width: 100%;
   }
-  
-  .mentor-name {
-    font-size: 24px;
-    font-weight: bold;
+
+  .mentor-products {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-  
-  .mentor-products ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .product-item {
-    margin-bottom: 20px;
-  }
-  
-  .product-item h4 {
-    font-size: 18px;
-  }
-  
-  .product-item p {
-    font-size: 16px;
-  }
-  
+}
+
+#harga-mentor{
+  margin-top: -10px;
+  margin-bottom: -5px;
+  font-size: large;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-cancel{
+  background-color: rgb(224, 64, 64);
+}

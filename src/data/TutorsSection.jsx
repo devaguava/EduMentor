@@ -2,6 +2,7 @@ import tutorJennie from '../assets/Tutor Jennie.png';
 import tutorAdi from '../assets/Tutor Adi.png';
 import tutorCarissa from '../assets/Tutor Carissa.png';
 import tutorAnisa1 from '../assets/Tutor Anisa.png';
+import { Link } from 'react-router-dom';
 
 export const tutorsSection = {
     content:`<p className="deskripsi"></p>
@@ -9,8 +10,10 @@ export const tutorsSection = {
               <p>
                 
               </p>`,
-              content2: `<a href="/mentor" class="tbl-pink">Lihat Semua Mentor</a>`,
-}
+              content2: (
+                <Link to="/mentor" className="tbl-pink">Lihat Semua Mentor</Link>
+            ),
+        };
 
 export const tutorsList = [
     {

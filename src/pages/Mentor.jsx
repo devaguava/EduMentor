@@ -118,6 +118,16 @@ const Mentor = () => {
                 <label htmlFor="mentor-2">Mahasiswa</label>
               </li>
             </ul>
+
+            <br />
+            <br />
+
+            <h3>Ingin Jadi Mentor?</h3>
+            <div>
+              <a href="https://forms.gle/UtVAy2gyhfuTeNEg6" target="_blank">
+                <button className="button-daftar">Daftar Sekarang!</button>
+              </a>
+            </div>
           </div>
 
           {/* Daftar mentor */}

@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav>
         <div className="wrapper">
-            <div className="logo"><Link to="/">Edu Mentor</Link></div>
+            <div className="logo"><Link to="/">EduMentor</Link></div>
             <div className="menu">
                 <ul>
                     {/* <li><a href="#home">Home</a></li> */}

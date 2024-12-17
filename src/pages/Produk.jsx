@@ -14,9 +14,10 @@ import qris from '../assets/qris.png';
 export const products = [
     {
         id: 1,
+        mid:1,
         name: "Matematika Diskrit",
         category: "Pendalaman materi",
-        price: 100000,
+        price: 79000,
         mentorType: "Dosen",
         mentorName: "Anisa Rahma Sari, S.T., M.T.",
         rating: 4.8,
@@ -28,9 +29,10 @@ export const products = [
       },
       {
         id: 2,
+        mid: 2,
         name: "Laravel PHP Pemula",
         category: "Pemrograman",
-        price: 35000,
+        price: 25000,
         mentorType: "Mahasiswa",
         mentorName: "Adi Sanjaya, S.Kom.",
         rating: 4.5,
@@ -42,9 +44,10 @@ export const products = [
       },
       {
         id: 3,
+        mid:3,
         name: "Basis Data",
         category: "Pendalaman materi",
-        price: 90000,
+        price: 65000,
         mentorType: "Dosen",
         mentorName: "Jennie Jang, S.T., M.T.",
         rating: 4.7,
@@ -56,9 +59,10 @@ export const products = [
       },
       {
         id: 4,
+        mid:4,
         name: "Algoritma Pemrograman",
         category: "Pemrograman",
-        price: 20000,
+        price: 17000,
         mentorType: "Mahasiswa",
         mentorName: "Carissa James, S.Kom.",
         rating: 4.6,
@@ -70,6 +74,7 @@ export const products = [
       },
       {
         id: 5,
+        mid:5,
         name: "Kalkulus",
         category: "Pendalaman Materi",
         price: 100000,
@@ -84,9 +89,10 @@ export const products = [
       },
       {
         id: 6,
+        mid:6,
         name: "Logika Matematika",
         category: "Pendalaman materi",
-        price: 27000,
+        price: 25000,
         mentorType: "Mahasiswa",
         mentorName: "Andi Setiawan, M.T.",
         rating: 4.8,
@@ -98,6 +104,7 @@ export const products = [
       },
       {
         id: 7,
+        mid:1,
         name: "Matematika Diskrit II",
         category: "Pendalaman materi",
         price: 100000,
@@ -112,6 +119,7 @@ export const products = [
       },
       {
         id: 8,
+        mid: 2,
         name: "Laravel PHP Pemula",
         category: "Pemrograman",
         price: 35000,
@@ -126,6 +134,7 @@ export const products = [
       },
       {
         id: 9,
+        mid:3,
         name: "Basis Data II",
         category: "Pendalaman materi",
         price: 100000,
@@ -140,6 +149,7 @@ export const products = [
       },
       {
         id: 10,
+        mid:4,
         name: "Algoritma Pemrograman",
         category: "Pemrograman",
         price: 20000,
@@ -154,6 +164,7 @@ export const products = [
       },
       {
         id: 11,
+        mid:5,
         name: "Kalkulus II",
         category: "Latihan",
         price: 115000,
@@ -168,6 +179,7 @@ export const products = [
       },
       {
         id: 12,
+        mid:6,
         name: "Logika Matematika II",
         category: "Pendalaman materi",
         price: 37000,
@@ -208,9 +220,15 @@ const Produk = () => {
 
   const handlePaymentSuccess = () => {
     setShowPaymentModal(false); // Menutup modal pembayaran
+    alert("Pembayaran berhasil!");
     if (selectedProduct) {
       navigate(`/produkdetail/${selectedProduct.id}`);  // Navigasi ke halaman detail produk
     }
+  };
+
+  // Fungsi untuk menangani cancel pembayaran
+  const handleCancel = () => {
+    setShowPaymentModal(false); // Menutup modal ketika cancel diklik
   };
 
   return (
@@ -337,6 +355,7 @@ const Produk = () => {
                   <span>★ {product.rating}</span>
                   <span>({product.numParticipants}+ peserta)</span>
                 </div>
+                <button onClick={() => handleProductSelect(product)}>Beli Produk</button>
               </div>
             </div>
           ))}
@@ -347,12 +366,19 @@ const Produk = () => {
         <div className="payment-modal">
           <div className="modal-content">
             <h3>Silakan Melakukan Pembayaran</h3>
+            <p>Scan QRIS untuk melakukan pembayaran</p>
             <div className="qr-placeholder">
               {/* Placeholder untuk QR Code */}
               {/* <p>QR Code Pembayaran</p> */}
               <img src={qris} alt="" />
-            </div>
+            </div >
+            <div >
+            <button onClick={handleCancel} className="btn-cancel" style={{marginRight: '10px'}}>
+                Batal
+              </button>
             <button onClick={handlePaymentSuccess}>Sudah Bayar</button>
+            </div>
+            
           </div>
         </div>
       )}

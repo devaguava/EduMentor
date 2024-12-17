@@ -32,7 +32,7 @@ function Home() {
         <section id="courses">
           <div className="kolom">{parse(courseSection.content1)}</div>
           <img src={courseSection.image} />
-          <div className="kolom">{parse(courseSection.content2)}</div>
+          {/* <div className="kolom">{parse(courseSection.content2)}</div> */}
         </section>
 
         {/* tutor */}
