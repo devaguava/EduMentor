@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { products } from './Produk';  // Mengimpor data produk dari Produk.jsx
 import '../styles/MentorDetail.css';
-import qris from '../assets/qris.png'; // Pastikan gambar QR code ada di folder assets
+import qris from '../assets/qris1.jpg'; // Pastikan gambar QR code ada di folder assets
 
 const MentorDetail = () => {
   const location = useLocation();
@@ -43,8 +43,8 @@ const MentorDetail = () => {
         <img src={mentor.imageUrl} alt={mentor.mentorName} className="mentor-image" />
         <div className="mentor-info">
           <h2>{mentor.mentorName}</h2>
-          <p><strong>Jenis Mentor:</strong> {mentor.mentorType}</p>
-          <p><strong>Rating:</strong> {mentor.rating} ★</p>
+          <p><strong>Mentor</strong> {mentor.mentorType}</p>
+          <p className='rating-mentor'><strong>Rating: {mentor.rating} ★</strong> </p>
           <p><strong>Jumlah Peserta:</strong> {mentor.numParticipants}+ peserta</p>
         </div>
       </div>
@@ -72,6 +72,7 @@ const MentorDetail = () => {
             <div className="qr-placeholder">
               <img src={qris} alt="QR Code Pembayaran" />
             </div>
+            <p>Jumlah Tagihan Rp{selectedProduct.price}</p>
             <button onClick={handleCancel} className="btn-cancel" style={{marginRight: '10px'}}>
                 Batal
               </button>

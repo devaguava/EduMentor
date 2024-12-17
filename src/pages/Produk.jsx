@@ -9,7 +9,7 @@ import tutorAdi from '../assets/tutorAdi.png';
 import tutorCarissa from '../assets/tutorCarissa.png';
 import tutorDavid from '../assets/tutorDavid.jpg';
 import tutorAndi from '../assets/tutorAndi.jpg';
-import qris from '../assets/qris.png';
+import qris from '../assets/qris1.jpg';
 
 export const products = [
     {
@@ -372,6 +372,7 @@ const Produk = () => {
               {/* <p>QR Code Pembayaran</p> */}
               <img src={qris} alt="" />
             </div >
+            <p>Jumlah Tagihan Rp{selectedProduct.price}</p>
             <div >
             <button onClick={handleCancel} className="btn-cancel" style={{marginRight: '10px'}}>
                 Batal
